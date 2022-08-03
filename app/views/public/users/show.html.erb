@@ -2,12 +2,12 @@
   <!--<div class="row">-->
     <div class="calendar">
       <div class="month">
-        <i class="fas fa-angle-left prev"></i>
+        <i class="prev"><</i>
         <div class="date">
           <h1></h1>
           <p></p>
         </div>
-        <i class="fas fa-angle-right next"></i>
+        <i class="next">></i>
       </div>
       <div class="weekdays">
         <div>Sun</div>
@@ -26,13 +26,24 @@
 </div>
 <script>
   'use strict';
+
   const date = new Date();
+
+  const prevBtn = document.querySelector(".prev");
+  const nextBtn = document.querySelector(".next");
+
+  console.log(prevBtn);
+
+  prevBtn.addEventListener('click', function() {
+    console.log('clicked');
+  })
 
   const renderCalendar = function() {
 
     date.setDate(1);
 
     const monthDays = document.querySelector('.days');
+
     const lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
 
     const prevLastDay = new Date(date.getFullYear(), date.getMonth(), 0).getDate(); //前の月の最終日を取得する
@@ -97,14 +108,16 @@
     monthDays.innerHTML = days;
   };
 
-  document.querySelector('.prev').addEventListener('click', () => {
+  prevBtn.addEventListener('click', function() {
     date.setMonth(date.getMonth() - 1);
     renderCalendar();
+    console.log('clicked!');
   });
 
-  document.querySelector('.next').addEventListener('click', () => {
+  nextBtn.addEventListener('click', function() {
     date.setMonth(date.getMonth() + 1);
     renderCalendar();
+    console.log('clicked!');
   });
 
   renderCalendar();
