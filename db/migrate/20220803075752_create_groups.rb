@@ -4,7 +4,7 @@ class CreateGroups < ActiveRecord::Migration[6.1]
       t.references :owner, null: false, foreign_key: { to_table: :users }
       
       t.timestamps
-      t.index [:onwer_id], unique: true
+      t.index [:owner_id], unique: true
     end
   end
 end
