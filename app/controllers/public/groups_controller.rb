@@ -6,16 +6,19 @@ class Public::GroupsController < ApplicationController
   end
 
   def show
+    @group = Group.find(params[:id])
   end
   
   def create
     @group = Group.new(group_params)
     @group.owner_id = current_user.id
-    if @group.save
-      redirect_to groups_path
-    else
-      render 'new'
-    end
+    @group.save
+    redirect_to groups_path
+  end
+  
+  def update
+    @group.update(group_params)
+    redirect_to groups_path
   end
   
   private
