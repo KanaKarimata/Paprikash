@@ -8,7 +8,6 @@ class CreateSchedules < ActiveRecord::Migration[6.1]
       t.datetime :finish
 
       t.timestamps
-      t.index [:room_id]
     end
   end
 end

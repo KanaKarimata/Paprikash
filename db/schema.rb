@@ -37,17 +37,20 @@ ActiveRecord::Schema.define(version: 2022_08_03_082502) do
 
   create_table "group_users", force: :cascade do |t|
     t.integer "user_id", null: false
-    t.integer "room_id", null: false
+    t.integer "group_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["room_id"], name: "index_group_users_on_room_id"
-    t.index ["user_id", "room_id"], name: "index_group_users_on_user_id_and_room_id"
+    t.index ["group_id"], name: "index_group_users_on_group_id"
+    t.index ["user_id", "group_id"], name: "index_group_users_on_user_id_and_group_id"
     t.index ["user_id"], name: "index_group_users_on_user_id"
   end
 
   create_table "groups", force: :cascade do |t|
+    t.integer "owner_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index "\"onwer_id\"", name: "index_groups_on_onwer_id", unique: true
+    t.index ["owner_id"], name: "index_groups_on_owner_id"
   end
 
   create_table "schedules", force: :cascade do |t|
@@ -58,7 +61,6 @@ ActiveRecord::Schema.define(version: 2022_08_03_082502) do
     t.datetime "finish"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index "\"room_id\"", name: "index_schedules_on_room_id"
     t.index ["group_id"], name: "index_schedules_on_group_id"
   end
 
@@ -79,7 +81,8 @@ ActiveRecord::Schema.define(version: 2022_08_03_082502) do
 
   add_foreign_key "chats", "rooms"
   add_foreign_key "chats", "users"
-  add_foreign_key "group_users", "rooms"
+  add_foreign_key "group_users", "groups"
   add_foreign_key "group_users", "users"
+  add_foreign_key "groups", "users", column: "owner_id"
   add_foreign_key "schedules", "groups"
 end
