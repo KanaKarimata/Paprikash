@@ -32,12 +32,6 @@
   const prevBtn = document.querySelector(".prev");
   const nextBtn = document.querySelector(".next");
 
-  console.log(prevBtn);
-
-  prevBtn.addEventListener('click', function() {
-    console.log('clicked');
-  })
-
   const renderCalendar = function() {
 
     date.setDate(1);
@@ -46,16 +40,17 @@
 
     const lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
 
-    const prevLastDay = new Date(date.getFullYear(), date.getMonth(), 0).getDate(); //前の月の最終日を取得する
+    const prevLastDay = new Date(date.getFullYear(), date.getMonth(), 0).getDate(); 
+    //前の月の最終日を取得する
 
-
-    const firstDayIndex = date.getDate();
+    const firstDayIndex = date.getDay();
     //firstDayIndex = 0 means that first day of this month is on Monday
-    // console.log(firstDayIndex);
+    console.log(firstDayIndex);
 
     const lastDayIndex = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDay();
     // lastDayIndex = 3 means that last day of this month is on Wednesday.
-
+  
+    
     const nextDays = 7 - lastDayIndex - 1;
     // 今月の最終日の曜日の位置を取得するlastDayIndexから７を引き、
     //１を引くと次の月の最初の週の日付（今月分に表示する）の数を取得できる
