@@ -28,17 +28,20 @@
       </div>
       <div class="days"></div>
     </div>
+    <% if @schedules.present? %>
+      <div class="events">
+        <% @schedules.each do |schedule| %>
+          <div class="event_item">
+            <%= schedule.title %>
+            <%= schedule.content %>
+            <%= schedule.start %>
+            <%= schedule.finish %>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
   </div>
-  <% if @schedules.present? %>
-    <div class="events">
-      <% @schedules.each do |schedule| %>
-        <%= schedule.title %>
-        <%= schedule.content %>
-        <%= schedule.start %>
-        <%= schedule.finish %>
-      <% end %>
-    </div>
-  <% end %>
+
 </div>
 <!--モーダル-->
 <div class="my_modal hidden">
