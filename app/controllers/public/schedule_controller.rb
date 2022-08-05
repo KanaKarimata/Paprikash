@@ -21,7 +21,7 @@ class Public::ScheduleController < ApplicationController
   private
 
   def schedule_params
-    params.require(:schedule).permit(:user_id, :group_id, :title, :content, :start, :finish)
+    params.require(:schedule).permit(:user_id, :title, :content)
   end
 
 end
