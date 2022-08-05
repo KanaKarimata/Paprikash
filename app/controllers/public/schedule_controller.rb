@@ -4,7 +4,8 @@ class Public::ScheduleController < ApplicationController
 
   def create
     @schedule = Schedule.new(schedule_params)
-    if @schedule.save
+    @schedule.user_id = current_user.id
+    if @schedule.save!
       redirect_to request.referer
     else
       flash[:notice] = "保存できませんでした。"
