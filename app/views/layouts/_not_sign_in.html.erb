@@ -1,5 +1,7 @@
 <div class="header_inner">
-  <p class="logo">Paprikash</p>
+  <div class="logo">
+    <%= link_to "Paprikash", root_path, class:"logo_item" %>
+  </div>
   <nav>
     <%= link_to "Sign in", new_user_session_path, class:"nav_item" %>
     <%= link_to "Sign up", new_user_registration_path, class:"nav_item" %>
