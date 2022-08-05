@@ -1,5 +1,6 @@
 class Public::UsersController < ApplicationController
   def show
+    @schedule = Schedule.new 
   end
 
   def index
