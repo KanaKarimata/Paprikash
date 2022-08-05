@@ -31,11 +31,11 @@
     <% if @schedules.present? %>
       <div class="events">
         <% @schedules.each do |schedule| %>
-          <div class="event_item">
-            <%= schedule.title %>
-            <%= schedule.content %>
-            <%= schedule.start %>
-            <%= schedule.finish %>
+          <div class="event_content">
+            <div class="event_item_title"><%= schedule.title %></div>
+            <div class="event_item_content"><%= schedule.content %></div>
+            <div class="event_item_start"><%= schedule.start.startstrftime("%Y年%m月%d日") %></div>
+            <div class="event_item_finish"><%= schedule.finish.finishstrftime("%Y年%m月%d日") %></div>
           </div>
         <% end %>
       </div>
