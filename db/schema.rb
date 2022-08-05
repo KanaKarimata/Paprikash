@@ -26,12 +26,12 @@ ActiveRecord::Schema.define(version: 2022_08_03_082502) do
 
   create_table "chats", force: :cascade do |t|
     t.integer "user_id", null: false
-    t.integer "room_id", null: false
+    t.integer "group_id", null: false
     t.string "message"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["room_id"], name: "index_chats_on_room_id"
-    t.index ["user_id", "room_id"], name: "index_chats_on_user_id_and_room_id"
+    t.index ["group_id"], name: "index_chats_on_group_id"
+    t.index ["user_id", "group_id"], name: "index_chats_on_user_id_and_group_id"
     t.index ["user_id"], name: "index_chats_on_user_id"
   end
 
@@ -53,7 +53,6 @@ ActiveRecord::Schema.define(version: 2022_08_03_082502) do
   end
 
   create_table "schedules", force: :cascade do |t|
-    t.integer "group_id"
     t.integer "user_id", null: false
     t.string "title"
     t.text "content"
@@ -61,7 +60,6 @@ ActiveRecord::Schema.define(version: 2022_08_03_082502) do
     t.datetime "finish"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["group_id"], name: "index_schedules_on_group_id"
     t.index ["user_id"], name: "index_schedules_on_user_id"
   end
 
@@ -80,11 +78,10 @@ ActiveRecord::Schema.define(version: 2022_08_03_082502) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "chats", "rooms"
+  add_foreign_key "chats", "groups"
   add_foreign_key "chats", "users"
   add_foreign_key "group_users", "groups"
   add_foreign_key "group_users", "users"
   add_foreign_key "groups", "users", column: "owner_id"
-  add_foreign_key "schedules", "groups"
   add_foreign_key "schedules", "users"
 end

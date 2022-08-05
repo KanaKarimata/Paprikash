@@ -1,7 +1,8 @@
 <div class="container-fluid">
+  <%= flash[:notice] %>
   <div class="row">
     <div class="col d-flex justify-content-center">
-      <% if @user.id == current_user.id %>
+      <% if @user == current_user %>
         <button class="show-modal"><i class="fas fa-plus"></i>&nbsp;Add Events</button>
       <% end %>
     </div>
@@ -28,6 +29,16 @@
       <div class="days"></div>
     </div>
   </div>
+  <% if @schedules.present? %>
+    <div class="events">
+      <% @schedules.each do |schedule| %>
+        <%= schedule.title %>
+        <%= schedule.content %>
+        <%= schedule.start %>
+        <%= schedule.finish %>
+      <% end %>
+    </div>
+  <% end %>
 </div>
 <!--モーダル-->
 <div class="my_modal hidden">
@@ -48,12 +59,12 @@
 
         <div class="event_field">
           <%= f.label :start, "Start", class: "event_field_label" %><br>
-          <%= f.text_field :start, class: "event_field_input_form" %>
+          <%= f.datetime_select :start, class: "event_field_input_form" %>
         </div>
 
         <div class="event_field">
           <%= f.label :finish, "Finish", class: "event_field_label" %><br>
-          <%= f.text_field :finish, class: "event_field_input_form" %>
+          <%= f.datetime_select :finish, class: "event_field_input_form" %>
         </div>
 
         <div class="event_save_btn_field">

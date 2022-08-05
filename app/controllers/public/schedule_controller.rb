@@ -1,23 +1,27 @@
 class Public::ScheduleController < ApplicationController
   def index
   end
-  
+
   def create
     @schedule = Schedule.new(schedule_params)
-    @schedule.save
-    redirect_to request.referer
+    if @schedule.save
+      redirect_to request.referer
+    else
+      flash[:notice] = "保存できませんでした。"
+      redirect_to request.referer
+    end
   end
-  
+
   def update
   end
-  
+
   def destroy
   end
-  
+
   private
-  
+
   def schedule_params
-    paramas.require(:schedule).permit(:user_id, :group_id, :title, :content, :start, :finish)
+    params.require(:schedule).permit(:user_id, :group_id, :title, :content, :start, :finish)
   end
-  
+
 end
