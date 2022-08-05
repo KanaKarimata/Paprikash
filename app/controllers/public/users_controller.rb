@@ -1,6 +1,8 @@
 class Public::UsersController < ApplicationController
   def show
-    @schedule = Schedule.new 
+    @schedule_new = Schedule.new 
+    @schedule = Schedule.find(params[:id])
+    
   end
 
   def index

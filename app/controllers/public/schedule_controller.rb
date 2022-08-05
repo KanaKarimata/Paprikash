@@ -4,6 +4,8 @@ class Public::ScheduleController < ApplicationController
   
   def create
     @schedule = Schedule.new(schedule_params)
+    @schedule.save
+    redirect_to request.referer
   end
   
   def update

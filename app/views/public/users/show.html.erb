@@ -1,7 +1,9 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col d-flex justify-content-center">
-      <button class="show-modal"><i class="fas fa-plus"></i>&nbsp;Add Events</button>
+      <%= user.id == current_user.id %>
+        <button class="show-modal"><i class="fas fa-plus"></i>&nbsp;Add Events</button>
+      <% end %>
     </div>
   </div>
   <div class="content">
