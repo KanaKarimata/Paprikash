@@ -172,3 +172,52 @@ html {
   border: none;
   background: none;
 }
+
+.new_event_form_area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.new_event_form {
+  display: flex;
+  flex-direction: column;
+}
+
+.event_field,
+.event_save_btn_field {
+  margin-top: 1rem;
+}
+
+.event_field_input_form {
+  width: 24rem;
+  height: 3rem;
+}
+
+.event_content_area {
+  height: 8rem;
+}
+
+.event_field_label {
+  font-size: 2rem;
+}
+
+.event_save_btn_field {
+  display: flex;
+  justify-content: right;
+}
+
+.event_save_btn {
+  font-size: 1.6rem;
+  color: #ffffff;
+  border: 0.1rem solid #2980b9;
+  border-radius: 3rem;
+  padding: 0.5rem 1rem;
+  background-color: #2980b9;
+}
+
+.event_save_btn:hover {
+  color: #ffffff;
+  background-color: #0b2333;
+  border: 0.1rem solid #0b2333;
+}
