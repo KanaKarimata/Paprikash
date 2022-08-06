@@ -1,6 +1,31 @@
-<div class="container-fluid content">
+<div class="container-fluid">
+  <%= flash[:notice] %>
   <div class="row">
-    <div class="col">
+    <div class="col d-flex justify-content-center">
+      <button class="show-modal"><i class="fas fa-plus"></i>&nbsp;Add Events</button>
+    </div>
+  </div>
+  <div class="content">
+
+    <div class="group_info">
+      <div class="group_owner">
+        <h2>Group Owner</h2>
+        <div class="group_members">
+          <%= link_to user_path(@owner), class:"member_link" do %>
+            <%= image_tag @owner.get_profile_image, class: "group_member_icon" %>
+            <span class="group_member_name"><%= @owner.name %></span>
+          <% end %>
+        </div>
+      </div>
+
+      <div class="group_members_area">
+        <h2>Group Members</h2>
+        <div class="group_member_index">
+          <%= render partial: "member_index", collection: @group_member, as: "member" %>
+        </div>
+      </div>
+    </div>
+
     <div class="calendar">
       <div class="month">
         <i class="prev"><</i>
@@ -21,11 +46,6 @@
       </div>
       <div class="days"></div>
     </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col">
-      <button class="show-modal"><i class="fas fa-plus"></i>&nbsp;Add Events</button>
     </div>
   </div>
 

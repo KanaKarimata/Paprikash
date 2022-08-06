@@ -160,3 +160,38 @@
   padding: 0.5rem;
   color: #d83473;
 }
+
+.group_info {
+  color: #000000;
+  margin-right: 16rem;
+}
+
+.group_member_index {
+  display: flex;
+  flex-direction: column;
+}
+
+.group_members_area {
+  margin-top: 2rem;
+}
+
+.group_members {
+  margin-top: 1.3rem;
+}
+
+.group_member_icon {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+}
+
+.group_member_name {
+  font-size: 1.5rem;
+}
+
+.member_link {
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+}
