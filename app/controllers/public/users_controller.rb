@@ -6,7 +6,7 @@ class Public::UsersController < ApplicationController
 
     if Schedule.exists?
       @schedule = Schedule.find(params[:id])
-      @schedules = Schedule.all
+      @schedules = @user.schedules
     end
 
   end
