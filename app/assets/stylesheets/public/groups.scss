@@ -120,6 +120,23 @@
   font-weight: bold;
 }
 
+.group_edit_btn {
+  font-size: 1.4rem;
+  text-decoration: none;
+  border: 0.1rem solid #578a3d;
+  border-radius: 5px;
+  padding: 0.5rem;
+  background-color: #578a3d;
+  color: #ffffff;
+  box-shadow: 0 0.5rem 1rem rgba(0,0, 0, 0.4);
+}
+
+.group_edit_btn:hover {
+  background-color: #203316;
+  color: #ffffff;
+  border: 0.1rem solid #203316;
+}
+
 .group_join_btn {
   font-size: 1.4rem;
   text-decoration: none;
