@@ -33,7 +33,7 @@
     </div>
     <% if @schedules.present? %>
       <div class="events">
-        <%= render partial: 'public/schedule/show_event_detail', collection: @schedules, as: "schedule" %>
+        <%= render partial: 'public/schedules/show_event_detail', collection: @schedules, as: "schedule" %>
       </div>
     <% end %>
   </div>
@@ -45,7 +45,7 @@
   <h1>New Events?</h1>
   <div class="new_event_form_area">
     <div class="new_event_form">
-      <%= render 'public/schedule/form', schedule: @schedule_new %>
+      <%= render 'public/schedules/form', schedule: @schedule_new %>
     </div>
   </div>
 </div>
@@ -74,6 +74,7 @@
     }
     //モーダルを閉じる
     const closeModal = function() {
+      console.log('clicked');
       modal.classList.add("hidden");
       overlay.classList.add("hidden");
     }
@@ -163,7 +164,9 @@
 
     showModal.addEventListener('click', openModal);
     btnCloseModal.addEventListener('click', closeModal);
+
     overlay.addEventListener('click', closeModal);
+
   }, false);
 
 </script>

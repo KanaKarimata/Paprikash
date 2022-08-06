@@ -34,7 +34,7 @@
   <button class="close_my_modal">&times;</button>
   <h1>New Events?</h1>
   <div class="new_event_form">
-    <%= form_with %>
+    <%= render 'public/schedules/form', schedule: @schedule_new %>
   </div>
 </div>
 <div class="overlay hidden"></div>
