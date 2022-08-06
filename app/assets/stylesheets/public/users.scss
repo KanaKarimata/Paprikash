@@ -104,3 +104,21 @@
 .edit_action {
   margin-top: 3rem;
 }
+
+.edit_title {
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+
+.edit_action {
+  display: flex;
+  justify-content: right;
+}
+
+.edit_save_btn {
+  border: 0.1rem solid #2980b9;
+  background-color: #2980b9;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 3rem;
+}
