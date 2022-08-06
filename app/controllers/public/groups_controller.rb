@@ -11,6 +11,7 @@ class Public::GroupsController < ApplicationController
     @owner = @group.owner
     @group_schedule_new = GroupSchedule.new
     @group_schedules = @group.group_schedules
+    @chat = Chat.new
   end
 
   def create

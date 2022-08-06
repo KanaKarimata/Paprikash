@@ -45,15 +45,23 @@
         <div>Sat</div>
       </div>
       <div class="days"></div>
-
-
     </div>
-
     <% if @group_schedules.present? %>
-      <div class="events">
+      <div class="group_events">
         <%= render partial: 'public/schedules/show_event_detail', collection: @group_schedules, as: "schedule" %>
       </div>
     <% end %>
+
+    <div class="chat">
+      <div class="chat_area">
+        <div class="chat_room">
+          
+        </div>
+        <div class="chat_form">
+          <%= render 'public/chats/form', chat: @chat, group: @group %>
+        </div>
+      </div>
+    </div>
 
   </div>
 </div>

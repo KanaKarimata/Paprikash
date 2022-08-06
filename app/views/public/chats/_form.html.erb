@@ -1,0 +1,4 @@
+<%= form_with model: chat, url: group_chats_path(group) do |f| %>
+  <%= f.text_field :message, class: "chat_input_form" %>
+  <%= f.submit "送信", class: "chat_send_btn" %>
+<% end %>

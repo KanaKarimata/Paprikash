@@ -163,7 +163,7 @@
 
 .group_info {
   color: #000000;
-  margin-right: 16rem;
+  margin-right: 5rem;
 }
 
 .group_member_index {
@@ -192,5 +192,12 @@
 
 .member_link {
   text-decoration: none;
+  color: #000000;
+}
+
+.group_events {
+  margin-left: 5rem;
+  display: flex;
+  flex-direction: column;
   color: #000000;
 }
