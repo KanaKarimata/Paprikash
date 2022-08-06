@@ -98,36 +98,48 @@
 
 .group_index {
   font-size: 1.6rem;
-  width: 64rem;
+  width: 40rem;
   margin-top: 3rem;
 }
 
-.group_index_area {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .group {
-  width: 16rem;
-  height: 10rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  margin: 2rem 0rem;
 }
 
 .group_link {
   text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+}
+
+.group_not_link {
+  color: #000000;
+  font-weight: bold;
+}
+
+.group_join_btn {
+  font-size: 1.4rem;
+  text-decoration: none;
   border: 0.1rem solid #2980b9;
   border-radius: 5px;
-  padding: 1rem;
+  padding: 0.5rem;
   background-color: #2980b9;
   color: #ffffff;
-  font-weight: bold;
   box-shadow: 0 0.5rem 1rem rgba(0,0, 0, 0.4);
 }
 
-.group_link:hover {
+.group_join_btn:hover {
   background-color: #3081f2;
   color: #ffffff;
   border: 0.1rem solid #3081f2;
+}
+
+.group_leave_btn {
+  font-size: 1.4rem;
+  text-decoration: none;
+  padding: 0.5rem;
+  color: #d83473;
 }

@@ -1,5 +1,21 @@
 <div class="group">
-  <%= link_to group_path(group), class: "group_link" do %>
-    <%= group.name %>
-  <% end %>
+  <div class="group_name">
+    <% if group.is_owned_by?(current_user) || group.includesUser?(current_user) %>
+      <%= link_to group_path(group), class: "group_link" do %>
+        <%= group.name %>
+      <% end %>
+    <% elsif %>
+      <span class="group_not_link"><%= group.name %></span>
+    <% end %>
+  </div>
+
+  <div class="group_btn">
+    <% if group.is_owned_by?(current_user) %>
+      <%= link_to 'Edit', edit_group_path(group), class: "btn btn-sm btn-success" %>
+    <% elsif group.includesUser?(current_user)%>
+      <%= link_to 'Leave this group', group_group_users_path(group), method: :delete, class: "group_leave_btn" %>
+    <% else %>
+      <%= link_to 'Join this group', group_group_users_path(group), method: :post, class: "group_join_btn" %>
+    <% end %>
+  </div>
 </div>

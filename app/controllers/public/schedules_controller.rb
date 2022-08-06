@@ -1,4 +1,4 @@
-class Public::ScheduleController < ApplicationController
+class Public::SchedulesController < ApplicationController
   def index
   end
 
