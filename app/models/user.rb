@@ -7,4 +7,5 @@ class User < ApplicationRecord
   has_many :group_users, dependent: :destroy
   has_many :schedules, dependent: :destroy
 
+  validates :name, presence: true
 end

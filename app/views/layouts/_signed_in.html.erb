@@ -3,9 +3,20 @@
     <%= link_to "Paprikash", root_path, class:"logo_item" %>
   </div>
   <nav>
+    <%= link_to user_path(current_user), class:"signed_in_nav_item" do %>
+      <i class="fas fa-user-alt"></i>
+      My Page
+    <% end %>
+
+    <%= link_to users_path, class:"signed_in_nav_item" do %>
+      <i class="fas fa-user-friends"></i>
+      Find Friends
+    <% end %>
+
     <%= link_to destroy_user_session_path, method: :delete, class:"signed_in_nav_item" do %>
       Log out
       <i class="fas fa-sign-out-alt"></i>
     <% end %>
+
   </nav>
 </div>
