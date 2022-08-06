@@ -42,31 +42,7 @@
   <h1>New Events?</h1>
   <div class="new_event_form_area">
     <div class="new_event_form">
-      <%= form_with model: @schedule_new, url: schedule_index_path do |f| %>
-        <div class="event_field">
-          <%= f.label :title, "Event", class: "event_field_label" %><br>
-          <%= f.text_field :title, class: "event_field_input_form" %>
-        </div>
-
-        <div class="event_field">
-          <%= f.label :content, "Content", class: "event_field_label" %><br>
-          <%= f.text_area :content, class: "event_field_input_form event_content_area" %>
-        </div>
-
-        <div class="event_field">
-          <%= f.label :start, "Start", class: "event_field_label" %><br>
-          <%= f.datetime_field :start, class: "event_field_input_form" %>
-        </div>
-
-        <div class="event_field">
-          <%= f.label :finish, "Finish", class: "event_field_label" %><br>
-          <%= f.datetime_field :finish, class: "event_field_input_form" %>
-        </div>
-
-        <div class="event_save_btn_field">
-          <%= f.submit 'SAVE!', class: "event_save_btn" %>
-        </div>
-      <% end %>
+      <%= render 'public/schedule/form', schedule: @schedule_new %>
     </div>
   </div>
 </div>
