@@ -1,7 +1,8 @@
 class Public::GroupSchedulesController < ApplicationController
 
   def create
-    @group_schedule = GroupSchedule.new(schedule_params)
+    group = Group.find(params[:group_id])
+    @group_schedule = GroupSchedule.new(group_schedule_params)
     @group_schedule.group_id = group.id
     if @group_schedule.save!
       redirect_to request.referer
@@ -13,7 +14,7 @@ class Public::GroupSchedulesController < ApplicationController
 
   private
 
-  def schedule_params
+  def group_schedule_params
     params.require(:group_schedule).permit(:group_id, :title, :content, :start, :finish)
   end
 

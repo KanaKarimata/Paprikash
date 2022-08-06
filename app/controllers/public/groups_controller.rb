@@ -9,6 +9,8 @@ class Public::GroupsController < ApplicationController
     @group = Group.find(params[:id])
     @group_member = @group.users
     @owner = @group.owner
+    @group_schedule_new = GroupSchedule.new
+    @group_schedules = @group.group_schedules
   end
 
   def create

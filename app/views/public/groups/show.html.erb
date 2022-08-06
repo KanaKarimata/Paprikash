@@ -45,16 +45,25 @@
         <div>Sat</div>
       </div>
       <div class="days"></div>
+
+
     </div>
-    </div>
+
+    <% if @group_schedules.present? %>
+      <div class="events">
+        <%= render partial: 'public/schedules/show_event_detail', collection: @group_schedules, as: "schedule" %>
+      </div>
+    <% end %>
+
   </div>
+</div>
 
 </div>
 <div class="my_modal hidden">
   <button class="close_my_modal">&times;</button>
   <h1>New Events?</h1>
   <div class="new_event_form">
-    <%= render 'public/schedules/form', schedule: @schedule_new %>
+    <%= render 'public/schedules/group_schedule_form', schedule: @group_schedule_new, group: @group %>
   </div>
 </div>
 <div class="overlay hidden"></div>
