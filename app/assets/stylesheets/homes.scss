@@ -47,6 +47,12 @@ header {
 
 .nav_item:hover {
   color: #ffffff;
-  background-color: #2980b9;
+  background-color: #3081f2;
   border: 0.1rem solid #ffffff;
+}
+
+.signed_in_nav_item:hover {
+  background-color: #3081f2;
+  color: #ffffff;
+  border: 0.1rem solid #3081f2;
 }
