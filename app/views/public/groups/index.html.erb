@@ -9,20 +9,17 @@
       <h1>New Group?</h1>
       <div class="new_group_form">
         <div class="new_group_form_area">
-          <%= form_with model: @group do |f| %>
-            <div class="new_group_field">
-              <%= f.label :name, "New Group Name",class:"new_group_name_label" %><br>
-              <%= f.text_field :name %>
-            </div>
-
-            <div class="new_group_action">
-              <%= f.submit "Create New Group!", class: "new_group_save" %>
-            </div>
-          <% end %>
+          <%= render 'form', group: @group %>
         </div>
       </div>
     </div>
     <div class="overlay hidden"></div>
+  </div>
+
+  <div class="group_index">
+    <div class="group_index_area">
+      <%= render partial: 'index', collection: @groups, as: "group" %>
+    </div>
   </div>
 </div>
 

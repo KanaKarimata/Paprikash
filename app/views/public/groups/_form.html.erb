@@ -1,0 +1,10 @@
+<%= form_with model: group do |f| %>
+  <div class="group_field">
+    <%= f.label :name, "New Group Name",class:"group_name_label" %><br>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="group_action">
+    <%= f.submit "Save!", class: "group_save" %>
+  </div>
+<% end %>
