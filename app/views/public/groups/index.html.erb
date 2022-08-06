@@ -1,2 +1,14 @@
-<h1>Public::Groups#index</h1>
-<p>Find me in app/views/public/groups/index.html.erb</p>
+<div class="group_index">
+  <h1>Groups</h1>
+  <button class="new_group_modal_btn">
+    <i class="fas fa-plus"></i>&nbsp;New Group
+  </button>
+  <div class="new_group_modal">
+    <h1>New Group?</h1>
+    <div class="new_group_form">
+      <%= form_with model: @group do |f| %>
+        <%= f.label:%>
+      <% end %>
+    </div>
+  </div>
+</div>

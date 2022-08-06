@@ -8,6 +8,11 @@
       My Page
     <% end %>
 
+    <%= link_to groups_path, class:"signed_in_nav_item" do %>
+      <i class="fas fa-users"></i>
+      Groups
+    <% end %>
+
     <%= link_to users_path, class:"signed_in_nav_item" do %>
       <i class="fas fa-user-friends"></i>
       Find Friends
