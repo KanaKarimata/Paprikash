@@ -1,24 +1,35 @@
-          
-          <!-- イベント詳細モーダル開くボタン -->
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal-<%= schedule.id %>">
-              <div class="event_item_title"><%= schedule.title %></div>
-          </button>
-          
-          <!-- イベント詳細モーダル -->
-          <div class="modal fade" id="exampleModal-<%= schedule.id %>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel-<%= schedule.id %>">
-                    <div class="event_item_title"><%= schedule.title %></div>
-                  </h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <div class="event_item_content"><%= schedule.content %></div>
-                  <div class="event_item_start"><%= schedule.start.strftime("%Y年%m月%d日 %-H時%M分") %></div>
-                  <div class="event_item_finish"><%= schedule.finish.strftime("%Y年%m月%d日%-H時%M分") %></div>
-                </div>
-              </div>
-            </div>
+<!-- イベント詳細モーダル開くボタン -->
+  <button type="button" class="event_show" data-bs-toggle="modal" data-bs-target="#exampleModal-<%= schedule.id %>">
+      <div class="event_item_title">
+        <div class="event_show_btn_date"><%= schedule.start.strftime("%m/%d") %></div>
+        <div class="event_show_btn_title"><%= schedule.title %></div>
+      </div>
+  </button>
+
+  <!-- イベント詳細モーダル -->
+  <div class="modal fade" id="exampleModal-<%= schedule.id %>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title" id="exampleModalLabel-<%= schedule.id %>">
+            <div class="event_item_title"><%= schedule.title %></div>
+          </h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body event_content">
+          <div class="event_item_content">
+            <span class="event_item_content_title">-- 詳細 --</span>
+            <div class="event_item_content_detail"><%= schedule.content %></div>
           </div>
+          <div class="event_item_start">
+            <span class="start_title">Start : </span>
+            <span class="datetime"><%= schedule.start.strftime("%Y/%m/%d %-H:%M") %></span>
+          </div>
+          <div class="event_item_finish">
+            <span class="finish_title">Finish : </span>
+            <span class="datetime"><%= schedule.finish.strftime("%Y/%m/%d %-H:%M") %></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

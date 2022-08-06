@@ -229,19 +229,45 @@ html {
   margin-left: 16rem;
 }
 
-.event_content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 50%;
-  background-color: white;
-  padding: 3rem;
+.event_show {
+  font-size: 1.2rem;
+  background-color: #ffffff;
+  border: none;
+  padding: 1rem;
+  margin: 0.5rem 0;
   border-radius: 5px;
-  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
-  z-index: 10;
+  width: 24rem;
+  box-shadow: 0 0.5rem 1rem rgba(0,0, 0, 0.4);
 }
 
-.open_event_modal {
-  cursor: pointer;
+.event_item_title {
+  display: flex;
+  justify-content: space-between;
 }
+
+.event_content {
+  font-size: 1.6rem;
+}
+
+.event_show_btn_date {
+  font-weight: bold;
+}
+
+.event_item_content_title {
+  font-weight: bold;
+  color: #a9a9a9;
+}
+
+.start_title,
+.finish_title {
+  font-weight: bold;
+}
+
+.start_title {
+  color: #a3b9e0;
+}
+
+.finish_title {
+  color: #e0caa4;
+}
+
