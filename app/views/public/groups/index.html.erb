@@ -1,14 +1,50 @@
-<div class="group_index">
-  <h1>Groups</h1>
-  <button class="new_group_modal_btn">
-    <i class="fas fa-plus"></i>&nbsp;New Group
-  </button>
-  <div class="new_group_modal">
-    <h1>New Group?</h1>
-    <div class="new_group_form">
-      <%= form_with model: @group do |f| %>
-        <%= f.label:%>
-      <% end %>
+<div class="groups">
+  <div class="new_group">
+    <h1>Groups</h1>
+    <button class="new_group_modal_btn">
+      <i class="fas fa-plus"></i>&nbsp;New Group
+    </button>
+    <div class="new_group_modal hidden">
+      <button class="close_new_group_modal">&times;</button>
+      <h1>New Group?</h1>
+      <div class="new_group_form">
+        <div class="new_group_form_area">
+          <%= form_with model: @group do |f| %>
+            <div class="new_group_field">
+              <%= f.label :name, "New Group Name",class:"new_group_name_label" %><br>
+              <%= f.text_field :name %>
+            </div>
+
+            <div class="new_group_action">
+              <%= f.submit "Create New Group!", class: "new_group_save" %>
+            </div>
+          <% end %>
+        </div>
+      </div>
     </div>
+    <div class="overlay hidden"></div>
   </div>
 </div>
+
+<script>
+
+  const btnNewGroupModal = document.querySelector(".new_group_modal_btn");
+  const newGroupModal = document.querySelector(".new_group_modal");
+  const overlay = document.querySelector(".overlay");
+  const btnCloseNewGroupModal = document.querySelector(".close_new_group_modal");
+
+  const openNewGroupModal = function () {
+    newGroupModal.classList.remove("hidden");
+    overlay.classList.remove("hidden");
+  }
+
+  const closeNewGroupModal = function () {
+    newGroupModal.classList.add("hidden");
+    overlay.classList.add("hidden");
+  }
+
+  btnNewGroupModal.addEventListener('click', openNewGroupModal);
+  btnCloseNewGroupModal.addEventListener('click', closeNewGroupModal);
+  overlay.addEventListener('click', closeNewGroupModal);
+
+</script>

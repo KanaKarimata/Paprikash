@@ -1,3 +1,90 @@
 // Place all the styles related to the public/groups controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.hidden {
+  display: none;
+}
+
+.new_group_modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  background-color: white;
+  padding: 3rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.groups {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+.new_group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.new_group_modal_btn {
+  padding: 0.5rem;
+  font-size: 1.5rem !important;
+  color: #2980b9;
+  border: 1px solid #2980b9;
+  border-radius: 0.5rem 0.5rem;
+  background-color: transparent;
+}
+
+.new_group_modal_btn:hover {
+  background-color: #3081f2;
+  border: 1px solid #3081f2;
+  color: #ffffff;
+}
+
+.close_new_group_modal {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 5rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.new_group_form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.new_group_field,
+.new_group_action {
+  margin-top: 3rem;
+}
+
+.new_group_name_label {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.new_group_save {
+  border: 0.1rem solid #2980b9;
+  background-color: #2980b9;
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 3rem;
+  padding: 0.5rem 1rem;
+}
+
+.new_group_save:hover {
+  background-color: #4d4398;
+  border: 0.1rem solid #4d4398;
+}
