@@ -5,9 +5,19 @@
 .chat {
   width: 32rem;
   height: 52rem;
-  overflow: auto;
   background-color: #ffffff;
   margin-left: 5rem;
+}
+
+.chat_room {
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat_message_from_me {
+  font-size: 1.3rem;
+  color: #000000;
 }
 
 .chat_area {

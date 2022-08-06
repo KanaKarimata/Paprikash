@@ -16,7 +16,7 @@ Rails.application.routes.draw do
     resources :schedule, only: [:create, :update, :destroy]
     resources :groups, except: [:new] do
       resource :group_users, only: [:create, :destroy]
-      resource :chats, only: [:create]
+      resources :chats, only: [:create]
       resources :group_schedules, only: [:create, :update, :destroy]
     end
   end
