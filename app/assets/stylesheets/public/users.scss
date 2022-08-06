@@ -75,4 +75,32 @@
   width: 70px;
   height: 70px;
   object-fit: cover;
+  cursor: pointer;
+}
+
+.edit_user_modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  background-color: white;
+  padding: 3rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  color: #000000;
+  font-size: 1.4rem;
+}
+
+.edit_form_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.edit_filed,
+.edit_action {
+  margin-top: 3rem;
 }

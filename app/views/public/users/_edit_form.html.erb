@@ -1,0 +1,19 @@
+<%= form_with model: @user do |f| %>
+  <div class="edit_form_content">
+    <div class="edit_form_content_area">
+      <div class="edit_filed">
+        <%= f.label :profile_image, "Profile Image" %><br>
+        <%= f.file_field :profile_image %>
+      </div>
+
+      <div class="edit_filed">
+        <%= f.label :name, "Name" %><br>
+        <%= f.text_field :name %>
+      </div>
+
+      <div class="edit_action">
+        <%= f.submit "Save Profile!" %>
+      </div>
+    </div>
+  </div>
+<% end %>
