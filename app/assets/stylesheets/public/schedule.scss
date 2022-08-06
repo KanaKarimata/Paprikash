@@ -247,6 +247,8 @@ html {
 
 .event_content {
   font-size: 1.6rem;
+  display: flex;
+  justify-content: space-between;
 }
 
 .event_show_btn_date {

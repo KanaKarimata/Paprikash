@@ -1,7 +1,7 @@
 <!-- イベント詳細モーダル開くボタン -->
   <button type="button" class="event_show" data-bs-toggle="modal" data-bs-target="#exampleModal-<%= schedule.id %>">
       <div class="event_item_title">
-        <div class="event_show_btn_date"><%= schedule.start.strftime("%m/%d") %></div>
+        <div class="event_show_btn_date"><%= schedule.start.strftime("%Y/%m/%d") %></div>
         <div class="event_show_btn_title"><%= schedule.title %></div>
       </div>
   </button>
@@ -21,13 +21,15 @@
             <span class="event_item_content_title">-- 詳細 --</span>
             <div class="event_item_content_detail"><%= schedule.content %></div>
           </div>
-          <div class="event_item_start">
-            <span class="start_title">Start : </span>
-            <span class="datetime"><%= schedule.start.strftime("%Y/%m/%d %-H:%M") %></span>
-          </div>
-          <div class="event_item_finish">
-            <span class="finish_title">Finish : </span>
-            <span class="datetime"><%= schedule.finish.strftime("%Y/%m/%d %-H:%M") %></span>
+          <div class="show_date">
+            <div class="event_item_start">
+              <span class="start_title">Start : </span>
+              <span class="datetime"><%= schedule.start.strftime("%Y/%m/%d %-H:%M") %></span>
+            </div>
+            <div class="event_item_finish">
+              <span class="finish_title">Finish : </span>
+              <span class="datetime"><%= schedule.finish.strftime("%Y/%m/%d %-H:%M") %></span>
+            </div>
           </div>
         </div>
       </div>
