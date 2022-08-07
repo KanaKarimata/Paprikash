@@ -119,9 +119,14 @@
   font-weight: bold;
 }
 
-.edit_action {
+.edit_action,
+.withdraw_action {
   display: flex;
-  justify-content: right;
+  justify-content: center;
+}
+
+.withdraw_action {
+  margin-top: 0.5rem;
 }
 
 .edit_save_btn {
@@ -130,6 +135,12 @@
   color: #ffffff;
   padding: 0.5rem 1rem;
   border-radius: 3rem;
+}
+
+.withdraw_btn {
+  text-decoration: none;
+  color: #d04f97;
+  font-weight: bold;
 }
 
 .all_user {
