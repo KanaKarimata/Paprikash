@@ -1,14 +1,16 @@
 <div class="all_user">
   <div class="all_user_area">
     <% @users.each do |user| %>
-      <div class="user">
-        <div class="user_profile_image">
-          <%= image_tag user.get_profile_image, class: "profile_image" %>
+      <%= link_to user_path(user), class: "user_link" do %>
+        <div class="user">
+          <div class="user_profile_image">
+            <%= image_tag user.get_profile_image, class: "profile_image" %>
+          </div>
+          <div class="user_name">
+            <%= user.name %>
+          </div>
         </div>
-        <div class="user_name">
-          <%= user.name %>
-        </div>
-      </div>
+      <% end %>
     <% end %>
   </div>
 </div>
