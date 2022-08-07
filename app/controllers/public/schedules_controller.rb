@@ -14,9 +14,15 @@ class Public::SchedulesController < ApplicationController
   end
 
   def update
+    @schedule = Schedule.find(params[:id])
+    @schedule.update(schedule_params)
+    redirect_to request.referer
   end
 
   def destroy
+    @schedule = Schedule.find(params[:id])
+    @schedule.destroy
+    redirect_to  request.referer
   end
 
   private

@@ -12,6 +12,18 @@ class Public::GroupSchedulesController < ApplicationController
     end
   end
 
+  def update
+    @group_schedule = GroupSchedule.find(params[:id])
+    @group_schedule.update(group_schedule_params)
+    redirect_to request.referer
+  end
+
+  def destroy
+    @group_schedule = GroupSchedule.find(params[:id])
+    @group_schedule.destroy
+    redirect_to request.referer
+  end
+
   private
 
   def group_schedule_params

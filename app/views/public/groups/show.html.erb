@@ -48,7 +48,7 @@
     </div>
     <% if @group_schedules.present? %>
       <div class="group_events">
-        <%= render partial: 'public/schedules/show_event_detail', collection: @group_schedules, as: "schedule" %>
+        <%= render partial: 'public/schedules/group_show_event_detail', collection: @group_schedules, as: "schedule", locals: { group: @group } %>
       </div>
     <% end %>
 
