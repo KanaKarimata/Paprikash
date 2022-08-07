@@ -5,6 +5,10 @@
   </div>
 
   <div class="group_action">
-    <%= f.submit "Save!", class: "group_save" %>
+    <% if current_user.email == "guest@example.com" %>
+      <p>ゲストログインでご利用の方はご利用できません</p>
+    <% else %>
+      <%= f.submit "Save!", class: "group_save" %>
+    <% end %>
   </div>
 <% end %>

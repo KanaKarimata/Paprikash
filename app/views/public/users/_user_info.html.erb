@@ -1,7 +1,5 @@
 <div class="user_profile_image">
-  <%#= link_to edit_user_path(current_user) do %>
-    <%= image_tag user.get_profile_image, class: "profile_image" %>
-  <%# end %>
+  <%= image_tag user.get_profile_image, class: "profile_image" %>
 </div>
 <div class="user_name">
   <%= user.name %>
@@ -12,7 +10,7 @@
   <h1>Edit Profile</h1>
   <div class="edit_user_area">
     <div class="edit_user_form">
-      <%= render 'edit_form', user: @user %>
+      <%= render 'edit_form', user: user %>
     </div>
   </div>
 </div>

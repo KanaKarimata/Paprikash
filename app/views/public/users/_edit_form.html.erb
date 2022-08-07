@@ -12,11 +12,19 @@
       </div>
 
       <div class="edit_action">
-        <%= f.submit "Save Profile!", class:"edit_save_btn" %>
+        <% if user.email == "guest@example.com" %>
+          <p>ゲストログインでご利用の方は編集できません</p>
+        <% else %>
+          <%= f.submit "Save Profile!", class:"edit_save_btn" %>
+        <% end %>
       </div>
 
       <div class="widthdraw_action">
-        <%= link_to "退会する", withdraw_path(user), method: :patch, "data-confirm" => "本当に退会しますか？", class: "withdraw_btn" %>
+        <% if user.email == "guest@example.com" %>
+          <p>ゲストログインでご利用の方は退会できません</p>
+        <% else %>
+          <%= link_to "退会する", withdraw_path(user), method: :patch, "data-confirm" => "本当に退会しますか？", class: "withdraw_btn" %>
+        <% end %>
       </div>
 
     </div>
