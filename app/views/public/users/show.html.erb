@@ -33,7 +33,7 @@
     </div>
     <% if @schedules.present? %>
       <div class="events">
-        <%= render partial: 'public/schedules/show_event_detail', collection: @schedules, as: "schedule" %>
+        <%= render partial: 'public/schedules/show_event_detail', collection: @schedules, as: "schedule", locals: { user: @user } %>
       </div>
     <% end %>
   </div>
