@@ -3,12 +3,7 @@ class Public::UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @schedule_new = Schedule.new
-
-    if Schedule.exists?
-      @schedule = Schedule.find(params[:id])
-      @schedules = @user.schedules
-    end
-
+    @schedules = @user.schedules
   end
 
   def index

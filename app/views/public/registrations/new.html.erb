@@ -6,8 +6,13 @@
         <%= render "public/shared/error_messages", resource: resource %>
 
         <div class="field">
+          <%= f.label :name %><br />
+          <%= f.text_field :name, autofocus: true, class:"sign_up_form_input" %>
+        </div>
+
+        <div class="field">
           <%= f.label :email %><br />
-          <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"sign_up_form_input" %>
+          <%= f.email_field :email, autocomplete: "email", class:"sign_up_form_input" %>
         </div>
 
         <div class="field">
