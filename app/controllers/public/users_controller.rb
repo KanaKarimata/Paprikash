@@ -1,5 +1,5 @@
 class Public::UsersController < ApplicationController
-  
+
   def show
     @user = User.find(params[:id])
     @schedule_new = Schedule.new
@@ -18,6 +18,19 @@ class Public::UsersController < ApplicationController
     @user = User.find(params[:id])
     @user.update(user_params)
     redirect_to user_path(@user)
+  end
+
+  def withdraw
+    @user = current_user
+    if @user.email == 'guest@example.com'
+      reset_session
+      redirect_to root_path
+    else
+      @user.update(is_deleted: true)
+      #ここでis_deletedカラムの値を"退会"に更新
+       reset_session
+       redirect_to root_path
+    end
   end
 
   private

@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get "/about", to: "homes#about"
 
   scope module: :public do
+    patch '/users/:id/withdraw', to: 'users#withdraw', as: "withdraw"
     resources :users, except: [:new, :create]
     resources :schedules, only: [:create, :update, :destroy]
     resources :groups, except: [:new] do

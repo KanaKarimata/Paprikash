@@ -31,14 +31,14 @@ class Public::SessionsController < Devise::SessionsController
     sign_in user
     redirect_to user_path(user), notice: 'ゲストユーザーとしてログインしました！'
   end
-  
+
   protected
-  
+
   def reject_deleted_user
     @user = User.find_by(email: params[:user][:email])
     if @user
-      if (@user.valid_password?(params[:user][:password]) && (@user.is_deleted == "退会"))
-        redirect_to new_user_registration_path, falsh: {session_alert: "退会済のため、再登録が必要です。"}
+      if (@user.valid_password?(params[:user][:password]) && (@user.is_deleted == true ))
+        redirect_to new_user_registration_path
       end
     end
   end
