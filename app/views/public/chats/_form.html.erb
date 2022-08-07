@@ -1,4 +1,8 @@
 <%= form_with model: chat, url: group_chats_path(group) do |f| %>
-  <%= f.text_field :message, class: "chat_input_form" %>
-  <%= f.submit "送信", class: "chat_send_btn" %>
+  <span class="input_form">
+    <%= f.text_field :message, placeholder: "Text Message",class: "chat_input_form" %>
+  </span>
+   <%= button_tag type: 'submit', class: 'chat_send_btn' do %>
+      <i class="fas fa-paper-plane"></i>
+    <% end %>
 <% end %>
