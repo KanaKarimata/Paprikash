@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   scope module: :public do
     resources :users, except: [:new, :create]
-    resources :schedule, only: [:create, :update, :destroy]
+    resources :schedules, only: [:create, :update, :destroy]
     resources :groups, except: [:new] do
       resource :group_users, only: [:create, :destroy]
       resources :chats, only: [:create]

@@ -1,4 +1,4 @@
-<%= form_with model: schedule, url: schedule_index_path do |f| %>
+<%= form_with model: schedule, url: schedules_path do |f| %>
   <div class="event_field">
     <%= f.label :title, "Event", class: "event_field_label" %><br>
     <%= f.text_field :title, class: "event_field_input_form" %>
