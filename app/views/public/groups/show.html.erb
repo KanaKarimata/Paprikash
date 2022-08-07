@@ -54,7 +54,7 @@
 
     <div class="chat">
       <div class="chat_room">
-        <%= render partial: 'public/chats/index', collection: @chats, as: "chat", locals: { group_member: @group_member, owner: @owner } %>
+        <%= render partial: 'public/chats/index', collection: @chats, as: "chat", locals: { group_member: @group_member, owner: @owner, group: @group } %>
       </div>
       <div class="chat_area">
         <div class="chat_form">

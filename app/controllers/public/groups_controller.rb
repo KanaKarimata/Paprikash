@@ -11,7 +11,7 @@ class Public::GroupsController < ApplicationController
     @owner = @group.owner
     @group_schedule_new = GroupSchedule.new
     @group_schedules = @group.group_schedules
-    @chat = Chat.new
+    @chat = Chat.new(group: @group)
     @chats = @group.chat
   end
 
