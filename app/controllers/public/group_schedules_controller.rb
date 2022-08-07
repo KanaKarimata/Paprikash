@@ -19,7 +19,7 @@ class Public::GroupSchedulesController < ApplicationController
   end
 
   def destroy
-    @group_schedule = GroupSchedule.find(params[:id])
+    @group_schedule = GroupSchedule.find_by(id: params[:id], group_id: params[:id])
     @group_schedule.destroy
     redirect_to request.referer
   end

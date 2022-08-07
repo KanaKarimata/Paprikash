@@ -14,7 +14,9 @@
           <h1 class="modal-title" id="exampleModalLabel-<%= schedule.id %>">
             <div class="event_item_title"><%= schedule.title %></div>
           </h1>
-          <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Open second modal</button>
+          <button class="btn edit_schedule_btn" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">
+            <span class="edit_schedule">Edit?</span>
+          </button>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body event_content">
@@ -43,7 +45,7 @@
           <h1 class="modal-title" id="exampleModalToggleLabel2">Edit Schedule?</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body">
+        <div class="modal-body edit_body">
           <%= render "public/schedules/edit_group_schedule", schedule: schedule, group: group %>
         </div>
       </div>
