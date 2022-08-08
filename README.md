@@ -34,6 +34,7 @@ Paprikashは、スケジュール管理機能とチャット機能を融合さ�
 ## 設計書各種
 ### ER図
 <img width="570" alt="スクリーンショット 2022-08-08 11 13 10" src="https://user-images.githubusercontent.com/100674792/183325019-7683d168-30cd-48b1-898a-e68d358b5033.png">
+
 ### アプリケーション詳細設計
 <img width="511" alt="スクリーンショット 2022-08-08 11 14 20" src="https://user-images.githubusercontent.com/100674792/183325034-7e9a8c5d-5c40-40f0-ac76-c31776739709.png">
 
