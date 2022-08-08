@@ -2,13 +2,13 @@
 
 Paprikashは、スケジュール管理機能とチャット機能を融合させた、コミュニケーションを取りながら日程調整ができるアプリです。
 
-<!--Paprikash has 2 functions that you can manage schedules with your firends, family, your colleagues and so on while chatting.-->
+Paprikash has 2 functions that you can manage schedules with your firends, family, your colleagues and so on while chatting.
 
 ### お詫び
 
 現在デプロイに時間を要しています。完了しましたらURLをお知らせしますのでそれまで少々お待ちください。
 
-<!--We apologize for the inconvenience. We haven't completed deploying yet. When we finish to public, URL will be shared.-->
+We apologize for the inconvenience. We haven't completed deploying yet. When we finish to public, URL will be shared.
 
 ## アプリイメージ
 <img width="1117" alt="スクリーンショット 2022-08-08 10 32 33" src="https://user-images.githubusercontent.com/100674792/183323476-dd0b2360-1889-4b8d-ad16-c336c9a48fc4.png">
