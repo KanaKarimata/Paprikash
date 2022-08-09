@@ -58,6 +58,7 @@ gem 'devise'
 gem 'pry-rails'
 gem 'dotenv-rails'
 group :production do
+  ruby '3.1.2'
   gem 'mysql2'
 end
 gem "net-smtp"
