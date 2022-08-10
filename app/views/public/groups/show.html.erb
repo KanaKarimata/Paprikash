@@ -71,8 +71,10 @@
 <div class="my_modal hidden">
   <button class="close_my_modal">&times;</button>
   <h1>New Events?</h1>
-  <div class="new_event_form">
-    <%= render 'public/schedules/group_schedule_form', schedule: @group_schedule_new, group: @group %>
+  <div class="new_event_form_area">
+    <div class="new_event_form">
+      <%= render 'public/schedules/group_schedule_form', schedule: @group_schedule_new, group: @group %>
+    </div>
   </div>
 </div>
 <div class="overlay hidden"></div>
