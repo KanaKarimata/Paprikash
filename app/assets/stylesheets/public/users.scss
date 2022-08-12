@@ -81,6 +81,13 @@
   cursor: pointer;
 }
 
+.profile_image_not_user {
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+}
+
 .user_name {
   font-size: 1.8rem;
   color: #000000;
