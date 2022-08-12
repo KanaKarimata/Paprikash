@@ -1,3 +1,5 @@
+'use strict';
+
 document.addEventListener("DOMContentLoaded", function(){
   //モーダルウインドウ
   const showModal = document.querySelector(".show-modal");

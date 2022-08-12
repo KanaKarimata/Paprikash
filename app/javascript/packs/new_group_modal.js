@@ -1,4 +1,6 @@
-document.addEventListener("DOMContentLoaded", function(){  
+'use strict';
+
+document.addEventListener("DOMContentLoaded", function(){
   const btnNewGroupModal = document.querySelector(".new_group_modal_btn");
   const newGroupModal = document.querySelector(".new_group_modal");
   const overlay = document.querySelector(".overlay");

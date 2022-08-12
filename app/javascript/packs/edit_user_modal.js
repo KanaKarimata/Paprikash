@@ -1,3 +1,5 @@
+'use strict';
+
 document.addEventListener("DOMContentLoaded", function(){
   const btnOpenEditModal = document.querySelector(".profile_image");
   const editUserModal = document.querySelector(".edit_user_modal");
