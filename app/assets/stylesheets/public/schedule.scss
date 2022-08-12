@@ -118,7 +118,8 @@ html {
   background-color: #2980b9;
 }
 
-.show-modal {
+.show-modal,
+.new_event_modal_btn {
   margin-left: 2rem;
   padding: 0.5rem;
   font-size: 1.5rem !important;
@@ -128,7 +129,8 @@ html {
   background-color: transparent;
 }
 
-.show-modal:hover {
+.show-modal:hover,
+.new_event_modal_btn:hover {
   color: #fff;
   border: 1px solid #2980b9;
   background-color: #2980b9;
@@ -138,7 +140,8 @@ html {
   display: none;
 }
 
-.my_modal {
+.my_modal,
+.new_event_modal {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -162,7 +165,8 @@ html {
   z-index: 5;
 }
 
-.close_my_modal {
+.close_my_modal,
+.close_new_event_modal {
   position: absolute;
   top: 1.2rem;
   right: 2rem;

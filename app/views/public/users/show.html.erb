@@ -6,7 +6,7 @@
         <p>ここに予定追加ボタンがありますが、ゲストログインでご利用の方はご利用できません</p>
       <% elsif @user != current_user  %>
       <% elsif  @user == current_user %>
-         <button class="show-modal"><i class="fas fa-plus"></i>&nbsp;Add Events</button>
+         <button class="new_event_modal_btn"><i class="fas fa-plus"></i>&nbsp;Add Events</button>
       <% end %>
     </div>
   </div>
@@ -43,8 +43,8 @@
 
 </div>
 <!--新規予定モーダル-->
-<div class="my_modal hidden">
-  <button class="close_my_modal">&times;</button>
+<div class="new_event_modal hidden">
+  <button class="close_new_event_modal">&times;</button>
   <h1>New Events?</h1>
   <div class="new_event_form_area">
     <div class="new_event_form">

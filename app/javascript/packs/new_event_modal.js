@@ -2,25 +2,25 @@
 
 document.addEventListener("DOMContentLoaded", function(){
   //モーダルウインドウ
-  const showModal = document.querySelector(".show-modal");
-  const modal = document.querySelector(".my_modal");
+  const showNewEventModal = document.querySelector(".new_event_modal_btn");
+  const newEventModal = document.querySelector(".new_event_modal");
   const overlay = document.querySelector(".overlay");
-  const btnCloseModal = document.querySelector(".close_my_modal");
+  const btnCloseNewEventModal = document.querySelector(".close_new_event_modal");
 
   　//モーダルを開く
-  const openModal = function () {
-    modal.classList.remove("hidden");
+  const openNewEventModal = function () {
+    newEventModal.classList.remove("hidden");
     overlay.classList.remove("hidden");
   }
   //モーダルを閉じる
-  const closeModal = function() {
+  const closeNewEventModal = function() {
     console.log('clicked');
-    modal.classList.add("hidden");
+    newEventModal.classList.add("hidden");
     overlay.classList.add("hidden");
   }
 
-  showModal.addEventListener('click', openModal);
-  btnCloseModal.addEventListener('click', closeModal);
+  showNewEventModal.addEventListener('click', openNewEventModal);
+  btnCloseNewEventModal.addEventListener('click', closeNewEventModal);
 
-  overlay.addEventListener('click', closeModal);
+  overlay.addEventListener('click', closeNewEventModal);
 })
