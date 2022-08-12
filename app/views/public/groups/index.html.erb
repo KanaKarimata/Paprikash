@@ -1,9 +1,13 @@
 <div class="groups">
   <div class="new_group">
     <h1>Groups</h1>
-    <button class="new_group_modal_btn">
-      <i class="fas fa-plus"></i>&nbsp;New Group
-    </button>
+      <% if current_user.email == "guest@example.com" %>
+        <p>ここにグループ追加ボタンがありますが、ゲストログインでご利用の方はご利用できません</p>
+      <% else %>
+        <button class="new_group_modal_btn">
+          <i class="fas fa-plus"></i>&nbsp;New Group
+        </button>
+      <% end %>
     <div class="new_group_modal hidden">
       <button class="close_new_group_modal">&times;</button>
       <h1>New Group?</h1>

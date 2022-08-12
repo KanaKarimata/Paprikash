@@ -20,10 +20,6 @@
   </div>
 
   <div class="event_save_btn_field">
-    <% if current_user.email == "guest@example.com" %>
-      <p>ゲストログインでご利用の方はご利用できません</p>
-    <% else %>
-      <%= f.submit 'SAVE!', class: "event_save_btn" %>
-    <% end %>
+    <%= f.submit 'SAVE!', class: "event_save_btn" %>
   </div>
 <% end %>

@@ -14,9 +14,13 @@
           <h1 class="modal-title" id="exampleModalLabel-<%= schedule.id %>">
             <div class="event_item_title"><%= schedule.title %></div>
           </h1>
-          <button class="btn edit_schedule_btn" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">
-            <span class="edit_schedule">Edit?</span>
-          </button>
+          <% if current_user.email == "guest@example.com" %>
+            <p>ゲストログインでご利用の方は編集できません</p>
+          <% else %>
+            <button class="btn edit_schedule_btn" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">
+              <span class="edit_schedule">Edit?</span>
+            </button>
+          <% end %>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body event_content">

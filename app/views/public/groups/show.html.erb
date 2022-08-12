@@ -2,7 +2,11 @@
   <%= flash[:notice] %>
   <div class="row">
     <div class="col d-flex justify-content-center">
+      <% if current_user.email == "guest@example.com" %>
+        <p>ここに予定追加ボタンがありますが、ゲストログインでご利用の方はご利用できません</p>
+      <% else %>
       <button class="show-modal"><i class="fas fa-plus"></i>&nbsp;Add Events</button>
+      <% end %>
     </div>
   </div>
   <div class="content">
