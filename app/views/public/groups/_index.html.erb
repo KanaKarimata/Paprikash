@@ -11,11 +11,24 @@
 
   <div class="group_btn">
     <% if group.is_owned_by?(current_user) %>
-      <button class="edit_group">Edit Group</button>
+      <button class="group_edit_btn">Edit Group</button>
     <% elsif group.includesUser?(current_user)%>
       <%= link_to 'Leave this group', group_group_users_path(group), method: :delete, class: "group_leave_btn" %>
     <% else %>
       <%= link_to 'Join this group', group_group_users_path(group), method: :post, class: "group_join_btn" %>
     <% end %>
   </div>
+
+  <div class="edit_group_modal hidden">
+    <button class="close_edit_group_modal">&times;</button>
+    <h1>Edit Group?</h1>
+    <div class="group_form">
+      <div class="group_form_area">
+        <%= render 'edit_form', group: group %>
+      </div>
+    </div>
+  </div>
+  <div class="overlay hidden"></div>
+
+  <%= javascript_pack_tag 'edit_group_modal' %>
 </div>

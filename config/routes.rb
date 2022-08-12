@@ -20,9 +20,5 @@ Rails.application.routes.draw do
       resources :group_schedules, only: [:create, :update, :destroy]
     end
   end
-
-  namespace :admin do
-    resources :users, only: [:index, :show, :destroy]
-  end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

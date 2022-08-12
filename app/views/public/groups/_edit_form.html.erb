@@ -1,0 +1,14 @@
+<%= form_with model: group, url: group_path(group), method: :PATCH do |f| %>
+  <div class="group_field">
+    <%= f.label :name, "Edit Group Name",class:"group_name_label" %><br>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="group_action">
+    <% if current_user.email == "guest@example.com" %>
+      <p>ゲストログインでご利用の方はご利用できません</p>
+    <% else %>
+      <%= f.submit "Save!", class: "group_save" %>
+    <% end %>
+  </div>
+<% end %>
