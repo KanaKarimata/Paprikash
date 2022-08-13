@@ -1,9 +1,6 @@
 # Paprikash(パプリカッシュ)
 
-Paprikashは、スケジュール管理機能とチャット機能を融合させた、コミュニケーションを取りながら日程調整ができるアプリです。
-
-Paprikash has 2 functions that you can manage schedules with your firends, family, your colleagues and so on while chatting.
-
+Paprikash(パプリカッシュ)は、スケジュール管理機能とチャット機能を融合させた、コミュニケーションを取りながら日程調整ができるアプリです。
 
 👇ゲストログイン機能もございます。ぜひ、ご覧ください。
 #### url: http://18.176.183.113
